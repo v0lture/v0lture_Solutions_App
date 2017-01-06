@@ -1,6 +1,8 @@
 package com.apps.v0lture.v0lture_solutions;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +34,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         public CardView cardView;
         public TextView title, version, details;
         public ImageView  overflow;
+        public RelativeLayout cardLayout;
         public MyViewHolder(final View itemView) {
             super(itemView);
             cardView = (CardView)itemView.findViewById(R.id.card_view);
@@ -38,6 +42,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             details = (TextView) itemView.findViewById(R.id.bottom_text);
             version = (TextView) itemView.findViewById(R.id.top_right_text);
             overflow = (ImageView) itemView.findViewById(R.id.overflow);
+            cardLayout = (RelativeLayout) itemView.findViewById(R.id.color_layout);
 
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -64,11 +69,38 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final CardAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(final CardAdapter.MyViewHolder holder, final int position) {
         Card card = cardList.get(position);
         holder.title.setText(card.getName());
         holder.details.setText(card.getDetails());
         holder.version.setText(card.getVersion());
+        if(position==0)
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF9334AF"));
+
+        else if(position==1) {
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF4DAF51"));
+            holder.title.setTextColor(Color.BLACK);
+            holder.details.setTextColor(Color.BLACK);
+            holder.version.setTextColor(Color.BLACK);
+        }else if(position==2) {
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF020202"));
+        }else if(position==3) {
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF1B77D2"));
+        }else if(position==4) {
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FFF44437"));
+        }else if(position==5) {
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF7A5649"));
+
+            if(position==0){
+                holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= (new Intent(String.valueOf(DB.class)));
+                        mContext.startActivity(intent);
+                    }
+                });
+            }
+        }
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,9 +134,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             switch (menuItem.getItemId()) {
                 case R.id.about_item:
                     Toast.makeText(mContext, "About", Toast.LENGTH_SHORT).show();
-                    return true;
-                case R.id.contact_item:
-                    Toast.makeText(mContext, "Contact", Toast.LENGTH_SHORT).show();
                     return true;
                 default:
             }
