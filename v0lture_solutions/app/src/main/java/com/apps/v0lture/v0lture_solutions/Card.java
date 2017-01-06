@@ -10,11 +10,13 @@ public class Card {
     private String version;
     private int thumbnail;
 
+
     public Card(String name, String details, String version, int thumbnail){
         this.name = name;
         this.details = details;
         this.version= version;
-        this.thumbnail = thumbnail;
+        this.thumbnail=thumbnail;
+
     }
     public String getName(){
         return name;

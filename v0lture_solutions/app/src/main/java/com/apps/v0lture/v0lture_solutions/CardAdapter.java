@@ -2,15 +2,16 @@ package com.apps.v0lture.v0lture_solutions;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -29,22 +30,19 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         public CardView cardView;
         public TextView title, version, details;
-        public ImageView thumbnail;
+        public ImageView  overflow;
         public MyViewHolder(final View itemView) {
             super(itemView);
             cardView = (CardView)itemView.findViewById(R.id.card_view);
             title = (TextView) itemView.findViewById(R.id.top_left_text);
             details = (TextView) itemView.findViewById(R.id.bottom_text);
             version = (TextView) itemView.findViewById(R.id.top_right_text);
-            thumbnail = (ImageView) itemView.findViewById(R.id.thumbnail);
+            overflow = (ImageView) itemView.findViewById(R.id.overflow);
+
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(itemView.getContext(), "Position:"+ Integer.toString(getPosition()), Toast.LENGTH_SHORT).show();
-                    if(clicklistener !=null){
-                        clicklistener.ClickListener(view,getAdapterPosition());
-                    }
-
                 }
             });
         }
@@ -66,14 +64,52 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(CardAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(final CardAdapter.MyViewHolder holder, int position) {
         Card card = cardList.get(position);
         holder.title.setText(card.getName());
         holder.details.setText(card.getDetails());
         holder.version.setText(card.getVersion());
 
-        Glide.with(mContext).load(card.getThumbnail()).into(holder.thumbnail);
+        holder.overflow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showPopupMenu(holder.overflow);
+            }
+        });
 
+    }
+    /**
+     * Showing popup menu when tapping on 3 dots
+     */
+    private void showPopupMenu(View view) {
+        // inflate menu
+        PopupMenu popup = new PopupMenu(mContext, view);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.contact, popup.getMenu());
+        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
+        popup.show();
+    }
+    /**
+     * Click listener for popup menu items
+     */
+    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
+
+        public MyMenuItemClickListener() {
+        }
+
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.about_item:
+                    Toast.makeText(mContext, "About", Toast.LENGTH_SHORT).show();
+                    return true;
+                case R.id.contact_item:
+                    Toast.makeText(mContext, "Contact", Toast.LENGTH_SHORT).show();
+                    return true;
+                default:
+            }
+            return false;
+        }
     }
 
 
