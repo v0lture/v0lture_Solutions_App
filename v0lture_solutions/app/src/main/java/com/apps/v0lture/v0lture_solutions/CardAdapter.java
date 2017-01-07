@@ -91,15 +91,60 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         }else if(position==5) {
             holder.cardLayout.setBackgroundColor(Color.parseColor("#FF7A5649"));
 
-            if(position==0){
-                holder.cardLayout.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent= (new Intent(String.valueOf(DB.class)));
-                        mContext.startActivity(intent);
-                    }
-                });
-            }
+        }
+        if(position==0){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        if(position==1){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        if(position==2){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        if(position==3){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        if(position==4){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        if(position==5){
+            holder.cardLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= (new Intent(view.getContext(), DB.class));
+                    mContext.startActivity(intent);
+                }
+            });
         }
 
         holder.overflow.setOnClickListener(new View.OnClickListener() {
