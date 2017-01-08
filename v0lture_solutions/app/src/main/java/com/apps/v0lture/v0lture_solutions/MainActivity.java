@@ -9,6 +9,9 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -129,5 +132,30 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.contact, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        super.onOptionsItemSelected(item);
+
+        switch (item.getItemId()){
+            case R.id.about_item:
+                Intent intent = new Intent(MainActivity.this, About.class);
+                startActivity(intent);
+                break;
+            case R.id.contact_item:
+                 intent = new Intent(MainActivity.this, Contact.class);
+                startActivity(intent);
+                break;
+
+        }
+        return true;
     }
 }

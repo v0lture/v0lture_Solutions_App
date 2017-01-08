@@ -78,7 +78,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setBackgroundColor(Color.parseColor("#FF9334AF"));
 
         else if(position==1) {
-            holder.cardLayout.setBackgroundColor(Color.parseColor("#FF4DAF51"));
+            holder.cardLayout.setBackgroundColor(Color.parseColor("#2E7D32"));
             holder.title.setTextColor(Color.BLACK);
             holder.details.setTextColor(Color.BLACK);
             holder.version.setTextColor(Color.BLACK);
@@ -177,7 +177,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
-                case R.id.about_item:
+                case R.id.contact_item:
                     Toast.makeText(mContext, "About", Toast.LENGTH_SHORT).show();
                     return true;
                 default:

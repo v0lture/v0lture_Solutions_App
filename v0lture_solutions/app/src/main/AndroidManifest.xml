@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".DB"></activity>
+        <activity android:name=".DB" />
+        <activity android:name=".Contact" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>
