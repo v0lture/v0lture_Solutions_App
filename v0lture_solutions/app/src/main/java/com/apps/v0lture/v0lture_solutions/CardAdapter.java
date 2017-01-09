@@ -4,17 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -25,31 +21,30 @@ import java.util.List;
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
     private Context mContext;
     private List<Card> cardList;
+
+    private List<Card> cardList2;
     private ClickListener clicklistener =null;
     public CardAdapter(List<Card>cardList){
         this.cardList = cardList;
     }
 
+
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        public CardView cardView;
+        public CardView cardView, cardView1, cardView2;
         public TextView title, version, details;
-        public ImageView  overflow;
+        public ImageView  profile;
         public RelativeLayout cardLayout;
         public MyViewHolder(final View itemView) {
             super(itemView);
             cardView = (CardView)itemView.findViewById(R.id.card_view);
+            cardView1 = (CardView)itemView.findViewById(R.id.card_view1);
+            cardView2 = (CardView)itemView.findViewById(R.id.card_view1);
             title = (TextView) itemView.findViewById(R.id.top_left_text);
             details = (TextView) itemView.findViewById(R.id.bottom_text);
             version = (TextView) itemView.findViewById(R.id.top_right_text);
-            overflow = (ImageView) itemView.findViewById(R.id.overflow);
+           // profile = (ImageView) itemView.findViewById(R.id.profile_my);
             cardLayout = (RelativeLayout) itemView.findViewById(R.id.color_layout);
 
-            cardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(itemView.getContext(), "Position:"+ Integer.toString(getPosition()), Toast.LENGTH_SHORT).show();
-                }
-            });
         }
     }
     public void setClickListener(ClickListener clickListener){
@@ -147,45 +142,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             });
         }
 
-        holder.overflow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showPopupMenu(holder.overflow);
-            }
-        });
-
     }
-    /**
-     * Showing popup menu when tapping on 3 dots
-     */
-    private void showPopupMenu(View view) {
-        // inflate menu
-        PopupMenu popup = new PopupMenu(mContext, view);
-        MenuInflater inflater = popup.getMenuInflater();
-        inflater.inflate(R.menu.contact, popup.getMenu());
-        popup.setOnMenuItemClickListener(new MyMenuItemClickListener());
-        popup.show();
-    }
-    /**
-     * Click listener for popup menu items
-     */
-    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
-
-        public MyMenuItemClickListener() {
-        }
-
-        @Override
-        public boolean onMenuItemClick(MenuItem menuItem) {
-            switch (menuItem.getItemId()) {
-                case R.id.contact_item:
-                    Toast.makeText(mContext, "About", Toast.LENGTH_SHORT).show();
-                    return true;
-                default:
-            }
-            return false;
-        }
-    }
-
 
     @Override
     public int getItemCount() {

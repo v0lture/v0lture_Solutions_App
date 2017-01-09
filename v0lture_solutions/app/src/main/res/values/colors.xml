@@ -7,5 +7,6 @@
     <color name="SplashBack">#232323</color>
     <color name="temp">#9334af</color>
     <color name="white">#fff</color>
+    <color name="light_background_Text">#4d4e4e</color>
 
 </resources>

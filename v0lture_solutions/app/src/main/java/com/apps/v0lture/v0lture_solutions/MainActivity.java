@@ -60,18 +60,18 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
                 R.drawable.card6
         };
 
-        Card a = new Card("v0ltureDB","A web MySQL database manager","0.0.3",cards[0]);
+        Card a = new Card("v0ltureDB","A web MySQL database manager", cards[0]);
         //cardLayout.setBackgroundColor(Color.BLUE);
         cardList.add(a);
-        Card b = new Card("MyMu","App for Methodist University portal","0.2",cards[1]);
+        Card b = new Card("MyMu","App for Methodist University portal", cards[1]);
         cardList.add(b);
-        Card c = new Card("vOS","The operating system by v0lture","0.0",cards[2]);
+        Card c = new Card("vOS","The operating system by v0lture", cards[2]);
         cardList.add(c);
-        Card d = new Card("vBugs","v0lture's in-house bug tracker","0.0",cards[3]);
+        Card d = new Card("vBugs","v0lture's in-house bug tracker", cards[3]);
         cardList.add(d);
-        Card e = new Card("veddit","Material design facelift for Reddit","0.0.2",cards[4]);
+        Card e = new Card("veddit","Material design facelift for Reddit", cards[4]);
         cardList.add(e);
-        Card f = new Card("vPolice","Minecraft Police plugin","0.0.0",cards[5]);
+        Card f = new Card("vPolice","Minecraft Police plugin", cards[5]);
         cardList.add(f);
 
        // if(cards[0].isSelected){
