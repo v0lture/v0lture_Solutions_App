@@ -18,6 +18,15 @@
         android:elevation="10dp"
         android:padding="10dp"
         android:src="@drawable/volturesolution"/>
+    <ProgressBar
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:progressDrawable="@drawable/circular_progress_bar"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

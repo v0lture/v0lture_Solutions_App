@@ -2,8 +2,8 @@ package com.apps.v0lture.v0lture_solutions;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,19 +12,19 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DB extends AppCompatActivity {
+public class MyMu extends AppCompatActivity {
     private TextView more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_db);
-         more = (TextView)(findViewById(R.id.textView6));
+        setContentView(R.layout.activity_my_mu);
+        more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent webLink = new Intent(Intent.ACTION_VIEW);
-                webLink.setData(Uri.parse("https://www.v0lture.com/v0ltureDB/"));
+                webLink.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.v0lture.deAngelo.mymu&hl=en"));
                 startActivity(webLink);
             }
         });
@@ -45,7 +45,7 @@ public class DB extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(DB.this, About.class);
+                Intent intent = new Intent(MyMu.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -81,7 +81,7 @@ public class DB extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(DB.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MyMu.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -4,21 +4,66 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launchernew"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+
+
+
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".DB" />
-        <activity android:name=".Contact" />
-        <activity android:name=".About"></activity>
-    </application>
+
+
+            <activity
+                android:name=".MainActivity"
+                android:screenOrientation="portrait" />
+                <activity
+                    android:name=".About"
+                    android:screenOrientation="portrait" />
+
+                    <activity
+                        android:label = "v0ltureDB"
+                        android:name=".DB"
+                        android:screenOrientation="portrait"
+                        android:theme="@style/DBTheme" />
+
+                            <activity
+                                android:label = "MyMu"
+                                android:name=".MyMu"
+                                android:screenOrientation="portrait"
+                                android:theme="@style/MyMuTheme"/>
+
+                                <activity
+                                    android:label = "vOS"
+                                    android:name=".vOS"
+                                    android:screenOrientation="portrait"
+                                    android:theme="@style/vOSTheme"/>
+
+                                    <activity
+                                        android:label = "vBugs"
+                                        android:name=".vBugs"
+                                        android:screenOrientation="portrait"
+                                        android:theme="@style/vBugsTheme"/>
+
+                                        <activity
+                                            android:label = "veddit"
+                                            android:name=".veddit"
+                                            android:screenOrientation="portrait"
+                                            android:theme="@style/vedditTheme"/>
+
+                                            <activity
+                                                android:label = "vPolice"
+                                                android:name=".vPolice"
+                                                android:screenOrientation="portrait"
+                                                android:theme="@style/vPoliceTheme"/>
+                                                </application>
 
 </manifest>

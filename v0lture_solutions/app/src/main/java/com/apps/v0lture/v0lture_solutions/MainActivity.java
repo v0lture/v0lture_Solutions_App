@@ -3,17 +3,20 @@ package com.apps.v0lture.v0lture_solutions;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,18 +63,18 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
                 R.drawable.card6
         };
 
-        Card a = new Card("v0ltureDB","A web MySQL database manager", cards[0]);
+        Card a = new Card("v0ltureDB","A web MySQL database manager","0.03", cards[0]);
         //cardLayout.setBackgroundColor(Color.BLUE);
         cardList.add(a);
-        Card b = new Card("MyMu","App for Methodist University portal", cards[1]);
+        Card b = new Card("MyMu","App for Methodist University portal","0.1", cards[1]);
         cardList.add(b);
-        Card c = new Card("vOS","The operating system by v0lture", cards[2]);
+        Card c = new Card("vOS","The operating system by v0lture","0.0", cards[2]);
         cardList.add(c);
-        Card d = new Card("vBugs","v0lture's in-house bug tracker", cards[3]);
+        Card d = new Card("vBugs","v0lture's in-house bug tracker","0.0", cards[3]);
         cardList.add(d);
-        Card e = new Card("veddit","Material design facelift for Reddit", cards[4]);
+        Card e = new Card("veddit","Material design facelift for Reddit","0.0.2", cards[4]);
         cardList.add(e);
-        Card f = new Card("vPolice","Minecraft Police plugin", cards[5]);
+        Card f = new Card("vPolice","Minecraft Police plugin","0.0.0", cards[5]);
         cardList.add(f);
 
        // if(cards[0].isSelected){
@@ -151,11 +154,33 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
                 startActivity(intent);
                 break;
             case R.id.contact_item:
-                 intent = new Intent(MainActivity.this, Contact.class);
-                startActivity(intent);
+                sendemail();
                 break;
 
         }
         return true;
     }
-}
+
+    private void sendemail() {
+        Log.i("Send email", "");
+        String[] TO = {"contact@v0lture.com"};
+        String[] CC = {""};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            finish();
+            Log.i("Email Sent...", "");
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(MainActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
+    }
+

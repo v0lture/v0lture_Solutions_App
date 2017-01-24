@@ -55,30 +55,53 @@ public class CardAdapter2 extends RecyclerView.Adapter<CardAdapter2.MyViewHolder
         //holder.thumbnail.setImageResource(cards.getThumbnail());
 
         if (position == 0) {
-            holder.teamLayout.setBackgroundResource(R.drawable.aham);
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(18);
 
         }
         else if (position == 1) {
-            holder.teamLayout.setBackgroundResource(R.drawable.deangelo);
-
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(18);
         }
         else if (position == 2) {
-            holder.teamLayout.setBackgroundResource(R.drawable.card2);
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
             holder.title.setTextSize(18);
 
 
         }
         else if (position == 3) {
-            holder.teamLayout.setBackgroundResource(R.drawable.maxallen);
-
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(18);
         }
         else if (position == 4) {
-            holder.teamLayout.setBackgroundResource(R.drawable.card2);
-            holder.title.setTextSize(14);
-
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(18);
         }
         else if (position == 5) {
-            holder.teamLayout.setBackgroundResource(R.drawable.card2);
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(18);
+        } else if (position == 6) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(12);
+
+        } else if (position == 7) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(12);
+
+        } else if (position == 8) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(12);
+
+        } else if (position == 9) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(12);
+
+        } else if (position == 10) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
+            holder.title.setTextSize(12);
+
+        } else if (position == 11) {
+            holder.teamLayout.setBackgroundResource(R.drawable.card3);
             holder.title.setTextSize(12);
 
         }

@@ -11,7 +11,7 @@ public class Card {
     private int thumbnail;
 
 
-    public Card(String name, String details, int thumbnail){
+    public Card(String name, String details,String version, int thumbnail){
         this.name = name;
         this.details = details;
         this.version= version;

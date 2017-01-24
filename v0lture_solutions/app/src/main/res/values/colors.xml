@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#1b77d2</color>
-    <color name="colorSecondary">#8c98c8f9</color>
+    <color name="colorSecondary">#0247b6</color>
     <color name="colorPrimaryDark">#020202</color>
     <color name="colorAccent">#FF4081</color>
     <color name="SplashBack">#232323</color>
-    <color name="temp">#9334af</color>
+    <color name="DB">#9334af</color>
+    <color name="DBSecondary">#767676</color>
+    <color name="MyMu">#317d35</color>
+    <color name="MyMuSecondary">#f2ca33</color>
+    <color name="vOS">#050405</color>
+    <color name="vOSSecondary">#2f3030</color>
+    <color name="vBugs">#1e78d4</color>
+    <color name="vBugsecondary">#2f3030</color>
+    <color name="veddit">#f54539</color>
+    <color name="vedditSecondary">#2f3030</color>
+    <color name="vPolice">#7c564b</color>
+    <color name="vPoliceSecondary">#4e362f</color>
     <color name="white">#fff</color>
-    <color name="light_background_Text">#4d4e4e</color>
+    <color name="light_background_Text">#2f3030</color>
+    <color name="light_card_background">#eb2f3030</color>
+    <color name="shadow">#a1a1a1</color>
 
 </resources>

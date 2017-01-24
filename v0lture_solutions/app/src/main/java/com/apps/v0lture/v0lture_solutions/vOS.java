@@ -2,8 +2,8 @@ package com.apps.v0lture.v0lture_solutions;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,26 +12,25 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DB extends AppCompatActivity {
+public class vOS extends AppCompatActivity {
     private TextView more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_db);
-         more = (TextView)(findViewById(R.id.textView6));
+        setContentView(R.layout.activity_v_os);
+
+        more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent webLink = new Intent(Intent.ACTION_VIEW);
-                webLink.setData(Uri.parse("https://www.v0lture.com/v0ltureDB/"));
+                webLink.setData(Uri.parse("https://v0lture.com/"));
                 startActivity(webLink);
             }
         });
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
@@ -45,7 +44,7 @@ public class DB extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(DB.this, About.class);
+                Intent intent = new Intent(vOS.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -81,7 +80,7 @@ public class DB extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(DB.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(vOS.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

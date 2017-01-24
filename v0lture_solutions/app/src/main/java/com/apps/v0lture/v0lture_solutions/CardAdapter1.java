@@ -52,6 +52,7 @@ public class CardAdapter1 extends RecyclerView.Adapter<CardAdapter1.MyViewHolder
         if (position == 0) {
             holder.teamLayout.setBackgroundResource(R.drawable.card2);
 
+
         }
     }
 @Override

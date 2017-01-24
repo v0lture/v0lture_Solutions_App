@@ -7,10 +7,84 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <!-- Base application theme. -->
+
+    <!--Dividers-->
     <style name="Divider">
         <item name="android:layout_width">37dp</item>
         <item name="android:layout_height">3dp</item>
         <item name="android:background">@color/colorSecondary</item>
     </style>
+    <style name="DividerDB">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/DB</item>
+    </style>
+    <style name="DividerMyMu">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/MyMu</item>
+    </style>
+    <style name="DividervOS">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/vOS</item>
+    </style>
+    <style name="DividervBugs">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/vBugs</item>
+    </style>
+    <style name="Dividerveddit">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/veddit</item>
+    </style>
+    <style name="DividervPolice">
+        <item name="android:layout_width">37dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/vPolice</item>
+    </style>
+    <!--Dividers-->
+
+
+    <!-- Custom themes for project activities -->
+    <style name="DBTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DB</item>
+        <item name="colorPrimaryDark">@color/DBSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MyMuTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/MyMu</item>
+        <item name="colorPrimaryDark">@color/MyMuSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="vOSTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/vOS</item>
+        <item name="colorPrimaryDark">@color/vOSSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="vBugsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/vBugs</item>
+        <item name="colorPrimaryDark">@color/vBugsecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="vedditTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/veddit</item>
+        <item name="colorPrimaryDark">@color/vedditSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="vPoliceTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/vPolice</item>
+        <item name="colorPrimaryDark">@color/vPoliceSecondary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- Custom themes for project activities -->
 
 </resources>
