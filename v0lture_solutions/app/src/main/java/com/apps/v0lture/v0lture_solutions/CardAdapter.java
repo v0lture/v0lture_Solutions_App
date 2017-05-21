@@ -46,9 +46,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
 
         }
     }
-    public void setClickListener(ClickListener clickListener){
+    /*public void setClickListener(ClickListener clickListener){
        ClickListener clicklistener = clickListener;
-    }
+    }*/
     public CardAdapter(Context mContext, List<Card> cardList){
         this.mContext = mContext;
         this.cardList = cardList;
@@ -108,7 +108,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), VOS.class));
+                    Intent intent= (new Intent(view.getContext(), vOS.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -117,7 +117,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), VBugs.class));
+                    Intent intent= (new Intent(view.getContext(), vBugs.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -126,7 +126,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), Veddit.class));
+                    Intent intent= (new Intent(view.getContext(), veddit.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -135,7 +135,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), VPolice.class));
+                    Intent intent= (new Intent(view.getContext(), vPolice.class));
                     mContext.startActivity(intent);
                 }
             });

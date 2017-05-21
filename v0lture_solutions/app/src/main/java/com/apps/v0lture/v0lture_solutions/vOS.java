@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class VOS extends AppCompatActivity {
+public class vOS extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +43,7 @@ public class VOS extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(VOS.this, About.class);
+                Intent intent = new Intent(vOS.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -79,7 +79,7 @@ public class VOS extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(VOS.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(vOS.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

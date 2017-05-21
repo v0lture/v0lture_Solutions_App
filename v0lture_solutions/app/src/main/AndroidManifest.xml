@@ -43,25 +43,25 @@
 
                                 <activity
                                     android:label = "vOS"
-                                    android:name=".VOS"
+                                    android:name=".vOS"
                                     android:screenOrientation="portrait"
                                     android:theme="@style/vOSTheme"/>
 
                                     <activity
                                         android:label = "vBugs"
-                                        android:name=".VBugs"
+                                        android:name=".vBugs"
                                         android:screenOrientation="portrait"
                                         android:theme="@style/vBugsTheme"/>
 
                                         <activity
                                             android:label = "veddit"
-                                            android:name=".Veddit"
+                                            android:name=".veddit"
                                             android:screenOrientation="portrait"
                                             android:theme="@style/vedditTheme"/>
 
                                             <activity
                                                 android:label = "vPolice"
-                                                android:name=".VPolice"
+                                                android:name=".vPolice"
                                                 android:screenOrientation="portrait"
                                                 android:theme="@style/vPoliceTheme"/>
                                                 </application>
