@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class vPolice extends AppCompatActivity {
-private TextView more;
+public class VPolice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +20,7 @@ private TextView more;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        more = (TextView)(findViewById(R.id.textView6));
+        TextView  more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +44,7 @@ private TextView more;
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(vPolice.this, About.class);
+                Intent intent = new Intent(VPolice.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -81,7 +80,7 @@ private TextView more;
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(vPolice.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VPolice.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

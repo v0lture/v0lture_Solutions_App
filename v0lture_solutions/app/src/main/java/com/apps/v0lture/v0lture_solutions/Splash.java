@@ -10,14 +10,13 @@ import android.widget.ProgressBar;
 
 public class Splash extends Activity {
     private static int SPLASH_TIME_OUT = 3000;
-    private ProgressBar spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        spinner = (ProgressBar)findViewById(R.id.progressBar);
+        ProgressBar spinner = (ProgressBar)findViewById(R.id.progressBar);
         spinner.setVisibility(View.VISIBLE);
 
         new Handler().postDelayed(new Runnable(){

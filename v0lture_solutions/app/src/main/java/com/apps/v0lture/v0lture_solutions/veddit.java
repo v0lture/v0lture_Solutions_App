@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class veddit extends AppCompatActivity {
-    private TextView more;
+public class Veddit extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +20,13 @@ public class veddit extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        more = (TextView)(findViewById(R.id.textView6));
+        TextView  more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent webLink = new Intent(Intent.ACTION_VIEW);
-                webLink.setData(Uri.parse("https://veddit.v0lture.com/"));
+                webLink.setData(Uri.parse("https://Veddit.v0lture.com/"));
                 startActivity(webLink);
             }
         });
@@ -45,7 +44,7 @@ public class veddit extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(veddit.this, About.class);
+                Intent intent = new Intent(Veddit.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -81,7 +80,7 @@ public class veddit extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(veddit.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(Veddit.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

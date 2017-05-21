@@ -22,8 +22,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     private Context mContext;
     private List<Card> cardList;
 
-    private List<Card> cardList2;
-    private ClickListener clicklistener =null;
+    public List<Card> cardList2;
     public CardAdapter(List<Card>cardList){
         this.cardList = cardList;
     }
@@ -48,7 +47,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         }
     }
     public void setClickListener(ClickListener clickListener){
-        this.clicklistener = clickListener;
+       ClickListener clicklistener = clickListener;
     }
     public CardAdapter(Context mContext, List<Card> cardList){
         this.mContext = mContext;
@@ -109,7 +108,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), vOS.class));
+                    Intent intent= (new Intent(view.getContext(), VOS.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -118,7 +117,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), vBugs.class));
+                    Intent intent= (new Intent(view.getContext(), VBugs.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -127,7 +126,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), veddit.class));
+                    Intent intent= (new Intent(view.getContext(), Veddit.class));
                     mContext.startActivity(intent);
                 }
             });
@@ -136,7 +135,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             holder.cardLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent= (new Intent(view.getContext(), vPolice.class));
+                    Intent intent= (new Intent(view.getContext(), VPolice.class));
                     mContext.startActivity(intent);
                 }
             });

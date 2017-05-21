@@ -24,9 +24,6 @@ import java.util.List;
 import static com.apps.v0lture.v0lture_solutions.R.drawable.card1;
 
 public class MainActivity extends AppCompatActivity implements ClickListener  {
-    private RecyclerView recyclerView;
-    private CardAdapter adapter;
-    private RelativeLayout cardLayout;
     private List<Card> cardList;
 
 
@@ -37,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = (RecyclerView)findViewById(R.id.Recycler_View);
-        cardLayout=(RelativeLayout)findViewById(R.id.color_layout);
+        RecyclerView recyclerView = (RecyclerView)findViewById(R.id.Recycler_View);
+        RelativeLayout cardLayout=(RelativeLayout)findViewById(R.id.color_layout);
         cardList = new ArrayList<>();
-        adapter = new CardAdapter(this,cardList);
+        CardAdapter adapter = new CardAdapter(this,cardList);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(layoutManager);
@@ -68,13 +65,13 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
         cardList.add(a);
         Card b = new Card("MyMu","App for Methodist University portal","0.1", cards[1]);
         cardList.add(b);
-        Card c = new Card("vOS","The operating system by v0lture","0.0", cards[2]);
+        Card c = new Card("VOS","The operating system by v0lture","0.0", cards[2]);
         cardList.add(c);
-        Card d = new Card("vBugs","v0lture's in-house bug tracker","0.0", cards[3]);
+        Card d = new Card("VBugs","v0lture's in-house bug tracker","0.0", cards[3]);
         cardList.add(d);
-        Card e = new Card("veddit","Material design facelift for Reddit","0.0.2", cards[4]);
+        Card e = new Card("Veddit","Material design facelift for Reddit","0.0.2", cards[4]);
         cardList.add(e);
-        Card f = new Card("vPolice","Minecraft Police plugin","0.0.0", cards[5]);
+        Card f = new Card("VPolice","Minecraft Police plugin","0.0.0", cards[5]);
         cardList.add(f);
 
        // if(cards[0].isSelected){
@@ -84,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
 
     }
     @Override
-    public void ClickListener(View view, int position) {
+    public void clicklistener(View view, int position) {
 
         if(position==0){
             Intent intent = new Intent(MainActivity.this, Splash.class);
@@ -155,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
                 break;
             case R.id.contact_item:
                 sendemail();
+                default: System.out.println();
                 break;
 
         }

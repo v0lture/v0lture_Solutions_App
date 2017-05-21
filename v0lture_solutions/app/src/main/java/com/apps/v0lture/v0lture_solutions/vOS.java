@@ -12,14 +12,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class vOS extends AppCompatActivity {
-    private TextView more;
+public class VOS extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_v_os);
 
-        more = (TextView)(findViewById(R.id.textView6));
+        TextView  more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +43,7 @@ public class vOS extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(vOS.this, About.class);
+                Intent intent = new Intent(VOS.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -80,7 +79,7 @@ public class vOS extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(vOS.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VOS.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 public class CardAdapter1 extends RecyclerView.Adapter<CardAdapter1.MyViewHolder> {
-    private Context mContext;
+    public Context mContext;
     private List<Card> cardList1;
     public CardAdapter1(List<Card>cardList1){
         this.cardList1 = cardList1;

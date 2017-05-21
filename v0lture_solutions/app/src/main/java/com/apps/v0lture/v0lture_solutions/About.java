@@ -34,10 +34,6 @@ import static com.apps.v0lture.v0lture_solutions.R.drawable.card8;
 import static com.apps.v0lture.v0lture_solutions.R.drawable.card9;
 
 public class About extends AppCompatActivity {
-    private RecyclerView recyclerview1;
-    private RecyclerView recyclerview2;
-    private CardAdapter1 adapter1;
-    private CardAdapter2 adapter2;
     private List<Card> cardList1;
     private List<Card> cardList2;
 
@@ -47,12 +43,12 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerview1 = (RecyclerView)findViewById(R.id.Recycler_View1);
-        recyclerview2 = (RecyclerView)findViewById(R.id.Recycler_View2);
+        RecyclerView recyclerview1 = (RecyclerView)findViewById(R.id.Recycler_View1);
+        RecyclerView recyclerview2 = (RecyclerView)findViewById(R.id.Recycler_View2);
         cardList1 = new ArrayList<>();
         cardList2 = new ArrayList<>();
-        adapter1 = new CardAdapter1(this,cardList1);
-        adapter2 = new CardAdapter2(this,cardList2);
+        CardAdapter1 adapter1 = new CardAdapter1(this,cardList1);
+        CardAdapter2 adapter2 = new CardAdapter2(this,cardList2);
 
         RecyclerView.LayoutManager layoutManager1 = new GridLayoutManager(this,1);
         recyclerview1.setLayoutManager(layoutManager1);

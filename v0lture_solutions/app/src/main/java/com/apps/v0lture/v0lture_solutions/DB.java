@@ -13,12 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class DB extends AppCompatActivity {
-    private TextView more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_db);
-         more = (TextView)(findViewById(R.id.textView6));
+         TextView more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override

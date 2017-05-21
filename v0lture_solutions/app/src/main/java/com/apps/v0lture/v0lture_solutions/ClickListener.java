@@ -7,5 +7,5 @@ import android.view.View;
  */
 
 public interface ClickListener {
-    void ClickListener(View view, int position);
+    void clicklistener(View view, int position);
 }

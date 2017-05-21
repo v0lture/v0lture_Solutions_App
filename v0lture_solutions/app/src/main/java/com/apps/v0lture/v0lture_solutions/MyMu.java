@@ -13,12 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyMu extends AppCompatActivity {
-    private TextView more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_mu);
-        more = (TextView)(findViewById(R.id.textView6));
+        TextView more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override

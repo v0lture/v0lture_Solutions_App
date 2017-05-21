@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class vBugs extends AppCompatActivity {
-    private TextView more;
+public class VBugs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +20,7 @@ public class vBugs extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        more = (TextView)(findViewById(R.id.textView6));
+        TextView more = (TextView)(findViewById(R.id.textView6));
 
         more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,7 +45,7 @@ public class vBugs extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.about_item:
-                Intent intent = new Intent(vBugs.this, About.class);
+                Intent intent = new Intent(VBugs.this, About.class);
                 startActivity(intent);
                 break;
             case R.id.contact_item:
@@ -59,6 +58,7 @@ public class vBugs extends AppCompatActivity {
 
             default:
                 return super.onOptionsItemSelected(item);
+
 
         }
         return true;
@@ -82,7 +82,7 @@ public class vBugs extends AppCompatActivity {
             finish();
             Log.i("Email Sent...", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(vBugs.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(VBugs.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }
