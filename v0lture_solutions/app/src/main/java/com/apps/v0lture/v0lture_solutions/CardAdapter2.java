@@ -17,7 +17,6 @@ import java.util.List;
  */
 
 public class CardAdapter2 extends RecyclerView.Adapter<CardAdapter2.MyViewHolder> {
-    private Context mContext;
     private List<Card> cardList2;
     public CardAdapter2(List<Card>cardList2){
         this.cardList2 = cardList2;
@@ -37,8 +36,8 @@ public class CardAdapter2 extends RecyclerView.Adapter<CardAdapter2.MyViewHolder
             teamLayout = (RelativeLayout)itemView.findViewById(R.id.team_card_layout);
         }
     }
-    public CardAdapter2(Context mContext, List<Card> cardList2){
-        this.mContext = mContext;
+    public CardAdapter2(Context mcontext, List<Card> cardList2){
+        Context mContext = mcontext;
         this.cardList2 = cardList2;
     }
     public CardAdapter2.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
