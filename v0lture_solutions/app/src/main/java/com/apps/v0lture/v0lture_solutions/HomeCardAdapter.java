@@ -18,12 +18,12 @@ import java.util.List;
  * Created by De'Angelo on 1/4/2017.
  */
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
+public class HomeCardAdapter extends RecyclerView.Adapter<HomeCardAdapter.MyViewHolder> {
     private Context mContext;
     private List<Card> cardList;
 
     public List<Card> cardList2;
-    public CardAdapter(List<Card>cardList){
+    public HomeCardAdapter(List<Card>cardList){
         this.cardList = cardList;
     }
 
@@ -49,13 +49,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     /*public void setClickListener(ClickListener clickListener){
        ClickListener clicklistener = clickListener;
     }*/
-    public CardAdapter(Context mContext, List<Card> cardList){
+    public HomeCardAdapter(Context mContext, List<Card> cardList){
         this.mContext = mContext;
         this.cardList = cardList;
     }
 
     @Override
-    public CardAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public HomeCardAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView  = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.cards_layout, parent, false);
 
@@ -63,7 +63,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(final CardAdapter.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final HomeCardAdapter.MyViewHolder holder, final int position) {
         Card card = cardList.get(position);
         holder.title.setText(card.getName());
         holder.details.setText(card.getDetails());

@@ -16,9 +16,9 @@ import java.util.List;
  * Created by De'Angelo on 1/8/2017.
  */
 
-public class CardAdapter2 extends RecyclerView.Adapter<CardAdapter2.MyViewHolder> {
+public class AboutCardAdapter extends RecyclerView.Adapter<AboutCardAdapter.MyViewHolder> {
     private List<Card> cardList2;
-    public CardAdapter2(List<Card>cardList2){
+    public AboutCardAdapter(List<Card>cardList2){
         this.cardList2 = cardList2;
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -36,18 +36,18 @@ public class CardAdapter2 extends RecyclerView.Adapter<CardAdapter2.MyViewHolder
             teamLayout = (RelativeLayout)itemView.findViewById(R.id.team_card_layout);
         }
     }
-    public CardAdapter2(Context mcontext, List<Card> cardList2){
+    public AboutCardAdapter(Context mcontext, List<Card> cardList2){
         Context mContext = mcontext;
         this.cardList2 = cardList2;
     }
-    public CardAdapter2.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AboutCardAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView  = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.about_card_layout, parent, false);
 
-        return new CardAdapter2.MyViewHolder(itemView);
+        return new AboutCardAdapter.MyViewHolder(itemView);
     }
     @Override
-    public void onBindViewHolder(final CardAdapter2.MyViewHolder holder, final int position) {
+    public void onBindViewHolder(final AboutCardAdapter.MyViewHolder holder, final int position) {
         Card cards= cardList2.get(position);
         holder.title.setText(cards.getName());
         holder.details.setText(cards.getDetails());
