@@ -2,4 +2,10 @@
     <string name="app_name">v0lture Solutions</string>
     <string name="Powered_By">Powered by v0lture Solutions, LLC</string>
     <string name="company_about_text">v0lture Solutions is a company dedicated to the creation and maintenance of high quality websites and software. We are proud supporters of the Free Software Foundation so all software we make for ourselves will always remain free and open source</string>
+    <string name="title_activity_june_bug">juneBug</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

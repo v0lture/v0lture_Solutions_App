@@ -7,11 +7,15 @@
     <item android:id="@+id/about_item"
         android:title="About"
         android:orderInCategory="100"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/contact_item"
         android:title="Contact"
         android:orderInCategory="101"
-        app:showAsAction="never"/>
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/issue_item"
+        android:title="Issues"
+        android:orderInCategory="102"
+        app:showAsAction="ifRoom"/>
 
 </menu>

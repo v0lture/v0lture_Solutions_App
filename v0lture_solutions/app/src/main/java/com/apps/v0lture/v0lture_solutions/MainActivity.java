@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
         RecyclerView recyclerView = (RecyclerView)findViewById(R.id.Recycler_View);
 //        RelativeLayout cardLayout=(RelativeLayout)findViewById(R.id.color_layout);
         cardList = new ArrayList<>();
-        CardAdapter adapter = new CardAdapter(this,cardList);
+        HomeCardAdapter adapter = new HomeCardAdapter(this,cardList);
 
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(layoutManager);
@@ -151,6 +151,10 @@ public class MainActivity extends AppCompatActivity implements ClickListener  {
                 break;
             case R.id.contact_item:
                 sendemail();
+            case R.id.issue_item:
+                Intent issueintent = new Intent(MainActivity.this, juneBug.class);
+                startActivity(issueintent);
+                break;
                 default: System.out.println();
                 break;
 

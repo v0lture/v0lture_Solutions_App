@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "403725567370",
+    "firebase_url": "https://project-junebug.firebaseio.com",
+    "project_id": "project-junebug",
+    "storage_bucket": "project-junebug.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403725567370:android:13c7dc0e9788665e",
+        "android_client_info": {
+          "package_name": "com.apps.v0lture.v0lture_solutions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403725567370-m4e6ulvlravje9j3ugm1tp2m76l00ema.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.v0lture.v0lture_solutions",
+            "certificate_hash": "25d925f32dfb260bcbac6e4577ec8c5f802a27d4"
+          }
+        },
+        {
+          "client_id": "403725567370-hj6mn3qu5rnkj0n70ts1guuollfljuum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV7BoT1hN2pf4F-OnTtN42KrqqGn9FDq0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403725567370-hj6mn3qu5rnkj0n70ts1guuollfljuum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403725567370:android:0c1b3d336b517a13",
+        "android_client_info": {
+          "package_name": "com.apps.v0lture.v0lture_solutions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403725567370-4vmonh7dl03dll939pbtqa2q6dgjj3mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apps.v0lture.v0lture_solutions",
+            "certificate_hash": "25d925f32dfb260bcbac6e4577ec8c5f802a27d4"
+          }
+        },
+        {
+          "client_id": "403725567370-hj6mn3qu5rnkj0n70ts1guuollfljuum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCV7BoT1hN2pf4F-OnTtN42KrqqGn9FDq0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403725567370-hj6mn3qu5rnkj0n70ts1guuollfljuum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

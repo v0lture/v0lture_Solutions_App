@@ -47,8 +47,8 @@ public class About extends AppCompatActivity {
         RecyclerView recyclerview2 = (RecyclerView)findViewById(R.id.Recycler_View2);
         cardList1 = new ArrayList<>();
         cardList2 = new ArrayList<>();
-        CardAdapter1 adapter1 = new CardAdapter1(this,cardList1);
-        CardAdapter2 adapter2 = new CardAdapter2(this,cardList2);
+        AboutCardAdapter adapter1 = new AboutCardAdapter(this,cardList1);
+        CompanyCardAdapter adapter2 = new CompanyCardAdapter(this,cardList2);
 
         RecyclerView.LayoutManager layoutManager1 = new GridLayoutManager(this,1);
         recyclerview1.setLayoutManager(layoutManager1);
