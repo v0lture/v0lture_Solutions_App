@@ -12,21 +12,16 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import com.apps.v0lture.v0lture_solutions.Issues;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +30,16 @@ import static com.apps.v0lture.v0lture_solutions.R.drawable.card1;
 
 public class juneBug extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-private List<Card> cards;
+    DatabaseReference databaseIssues;
+private List<Issues> cards;
+    public static  final String TITLE = "com.apps.v0lture.v0lture_solutions.title";
+    public static  final String DESCRIPTION = "com.apps.v0lture.v0lture_solutions.Description";
+    public static  final String STATUS = "com.apps.v0lture.v0lture_solutions.Status";
+    public static  final String PROJECT = "com.apps.v0lture.v0lture_solutions.Project";
+    public static  final String AUTHOR = "com.apps.v0lture.v0lture_solutions.Author";
+    public static  final String DAYS = "com.apps.v0lture.v0lture_solutions.Time";
+
+
 
 
 
@@ -45,6 +49,8 @@ private List<Card> cards;
         setContentView(R.layout.activity_june_bug);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        databaseIssues = FirebaseDatabase.getInstance().getReference("bugs");
 
 
 
@@ -75,14 +81,41 @@ private List<Card> cards;
 
 
     }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        databaseIssues.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                cards.clear();
+
+                for(DataSnapshot postSnapshot : dataSnapshot.getChildren()){
+                    Issues card = postSnapshot.getValue(Issues.class);
+
+                    cards.add(card);
+                }
+               /* Issues issueAdapter = new Issues(juneBug.this, cards);
+                cardviewIssues.setAdapter(issueAdapter);*/
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
     public void prepareCard(){
         int[]card = new int[]{
                 card1
         };
-
+Issues a = new Issues(TITLE, DESCRIPTION,STATUS,PROJECT,AUTHOR, DAYS);
+        cards.add(a);
     }
 
-    
+
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration{
         private int spanCount;
         private int spacing;

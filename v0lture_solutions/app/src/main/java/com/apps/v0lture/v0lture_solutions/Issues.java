@@ -7,6 +7,7 @@ import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 //[START issues_class]
@@ -21,7 +22,7 @@ public class Issues {
     public int startCount = 0;
     public Map<String, Boolean> stars = new HashMap<>();
 
-    public Issues(){
+    public Issues(juneBug juneBug, List<Issues> cards){
 
     }
     public Issues(String title, String Description, String Status, String Project, String Author, String Time){
@@ -37,49 +38,37 @@ public class Issues {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+
 
     public String getAuthor() {
         return Author;
     }
 
-    public void setAuthor(String author) {
-        Author = author;
-    }
+
 
     public String getStatus() {
         return Status;
     }
 
-    public void setStatus(String status) {
-        Status = status;
-    }
+
 
     public String getDescription() {
         return Description;
     }
 
-    public void setDescription(String description) {
-        Description = description;
-    }
+
 
     public String getTime() {
         return Time;
     }
 
-    public void setTime(String time) {
-        Time = time;
-    }
+
 
     public String getProject() {
         return Project;
     }
 
-    public void setProject(String project) {
-        Project = project;
-    }
+
 
     //[START issues_to_map]
     @Exclude

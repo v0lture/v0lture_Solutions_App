@@ -39,7 +39,7 @@ public class JuneBugCardAdapter extends RecyclerView.Adapter<JuneBugCardAdapter.
             title = (TextView) itemView.findViewById(R.id.textViewTitle);
         }
     }
-    public JuneBugCardAdapter(Context mcontext, List<Card> cards){
+    public JuneBugCardAdapter(Context mcontext, List<Issues> cards){
         Context mContext = mcontext;
         this.cards = cards;
     }
